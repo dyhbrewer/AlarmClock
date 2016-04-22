@@ -7,9 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AddAlarmViewController.h"
 
-@interface ViewController : UIViewController
-
-
+@interface ViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,AddAlarmViewControllerDelegate>
+{
+    UITableView *listTableView;
+    AddAlarmViewController *addAlertView;
+    NSMutableArray *alarmArray;
+    UIBarButtonItem *leftButton;
+    
+}
+@property(nonatomic,strong)UITableView *tableView;
 @end
 
